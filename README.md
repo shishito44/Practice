@@ -1,5 +1,4 @@
 # Practice
-# HigeDaruma.DemoConsoleSecret
 
 ## 準備
 
