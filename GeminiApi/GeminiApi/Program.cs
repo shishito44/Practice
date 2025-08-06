@@ -11,6 +11,7 @@ using var ai = new GoogleGenAI
     ApiKey = message
 };
 
+
 var response = await ai.Models.GenerateContentAsync(new()
 {
     Model = Models.Gemini2_0Flash,    // models/gemini-2.0-flash
@@ -18,6 +19,3 @@ var response = await ai.Models.GenerateContentAsync(new()
 });
 
 Console.WriteLine(response.GetText());
-
-
-
