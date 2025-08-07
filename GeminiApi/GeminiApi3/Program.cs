@@ -14,7 +14,7 @@ using var ai = new GoogleGenAI
     ApiKey = key
 };
 ;
-var minutesplompt = "C:/repo/Practice/textfile/minutesplompt.txt";
+var minutesplompt = "C:/repo/Practice/textfile/minutesplompt.md";
 string? meetingPath;
 string? meetingtext;
 
