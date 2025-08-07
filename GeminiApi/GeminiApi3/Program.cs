@@ -47,13 +47,68 @@ while (true)
     }
 }
 
-var minutestext = System.IO.File.ReadAllText(minutesplompt);
-Console.WriteLine(minutestext);
+
+var responseSchema = new Schema()
+{
+    Type = DataType.Object,
+    Properties = new Dictionary<string, Schema>()
+    {
+        ["title"] = new Schema()
+        {
+            Type = DataType.String,
+            Description = "議事録名",
+        },
+        ["day"] = new Schema()
+        {
+            Type = DataType.String,
+            Description = "日時",
+        },
+        ["participants"] = new Schema()
+        {
+            Type = DataType.String,
+            Description = "参加者",
+        },
+        ["subject"] = new Schema()
+        {
+            Type = DataType.String,
+            Description = "議題",
+        },
+        ["determining_matter"] = new Schema()
+        {
+            Type = DataType.String,
+            Description = "決定事項",
+        },
+        ["meeting_detail"] = new Schema()
+        {
+            Type = DataType.String,
+            Description = "議論内容",
+        },
+        ["todo"] = new Schema()
+        {
+            Type = DataType.String,
+            Description = "TODO（次回アクション）",
+        },
+
+
+
+
+    },
+    Required = ["title", "participants"]
+};
+
+
+var generationConfig = new GenerationConfig()
+{
+    ResponseSchema = responseSchema,
+    ResponseMimeType = "application/json",
+};
+
 
 var response2 = await ai.Models.GenerateContentAsync(new()
 {
+    GenerationConfig = generationConfig,
     Model = Models.Gemini2_0Flash,    // models/gemini-2.0-flash
-    Contents = meetingtext + "\n" + minutestext
+    Contents = meetingtext + "\n" + "上記をスキーマにしたがって議事録を作成して"
 });
 
 Console.WriteLine(response2.GetText());
