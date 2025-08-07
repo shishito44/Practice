@@ -1,4 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
+//AIが架空の会話内容を作り議事録にするプログラム
 using System;
 using System.IO;
 using GemiNet;
@@ -16,7 +17,6 @@ using var ai = new GoogleGenAI
 
 string meetingplompt = "C:/repo/Practice/textfile/meetingplompt.txt";
 string minutesplompt = "C:/repo/Practice/textfile/minutesplompt.txt";
-string filePath = "C:/repo/Practice/textfile/newfile.txt";
 string? meetingtext = null;
 string? minutestext = null;
 
@@ -30,11 +30,6 @@ var response1 = await ai.Models.GenerateContentAsync(new()
 });
 string? minutesfile = response1.GetText();
 
-using (StreamWriter writer = new StreamWriter(filePath,false))
-{
-    writer.WriteLine(minutesfile);
-}
-Console.WriteLine(minutesfile);
 
 minutestext = System.IO.File.ReadAllText(minutesplompt);
 Console.WriteLine(minutestext);
