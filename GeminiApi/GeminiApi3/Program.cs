@@ -93,7 +93,7 @@ var responseSchema = new Schema()
 
 
     },
-    Required = ["title", "participants"]
+    Required = ["title", "day", "participants", "subject", "determining_matter", "meeting_detail", "todo"]
 };
 
 
