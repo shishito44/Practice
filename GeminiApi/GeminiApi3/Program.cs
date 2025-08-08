@@ -13,8 +13,7 @@ using var ai = new GoogleGenAI
 {
     ApiKey = key
 };
-;
-var minutesplompt = "C:/repo/Practice/textfile/minutesplompt.md";
+
 string? meetingPath;
 string? meetingtext;
 
@@ -46,7 +45,6 @@ while (true)
         Console.WriteLine("エラーが発生しました：" + e.Message);
     }
 }
-
 
 var responseSchema = new Schema()
 {
@@ -102,7 +100,6 @@ var generationConfig = new GenerationConfig()
     ResponseSchema = responseSchema,
     ResponseMimeType = "application/json",
 };
-
 
 var response2 = await ai.Models.GenerateContentAsync(new()
 {

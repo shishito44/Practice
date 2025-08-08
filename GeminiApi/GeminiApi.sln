@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeminiApi2", "GeminiApi2\Ge
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeminiApi3", "GeminiApi3\GeminiApi3.csproj", "{8363467A-5998-460C-94B8-0A6D294C06BE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeminiApi.WindowsForms", "GeminiApi.WinddowsForms\GeminiApi.WindowsForms.csproj", "{93411304-DB42-436A-A775-86C41DF32AAB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeminiApi.Wpf", "GeminiApi.Wpf\GeminiApi.Wpf.csproj", "{6E74039B-9C95-4DF3-B426-C58D846285DB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{8363467A-5998-460C-94B8-0A6D294C06BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8363467A-5998-460C-94B8-0A6D294C06BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8363467A-5998-460C-94B8-0A6D294C06BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93411304-DB42-436A-A775-86C41DF32AAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93411304-DB42-436A-A775-86C41DF32AAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93411304-DB42-436A-A775-86C41DF32AAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93411304-DB42-436A-A775-86C41DF32AAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E74039B-9C95-4DF3-B426-C58D846285DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E74039B-9C95-4DF3-B426-C58D846285DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E74039B-9C95-4DF3-B426-C58D846285DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E74039B-9C95-4DF3-B426-C58D846285DB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
